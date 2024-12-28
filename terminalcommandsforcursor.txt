@@ -1,0 +1,64 @@
+Here’s a detailed explanation of each diagnostic command from the allowlist:
+
+1. ping
+	•	Purpose: Tests the connectivity to a specific host or server on a network.
+	•	How it works: Sends ICMP (Internet Control Message Protocol) echo requests to the target and measures the response time.
+	•	Usage:
+	•	Example: ping google.com
+	•	Use case: Verify whether a server is reachable and measure latency.
+
+2. traceroute
+	•	Purpose: Traces the path that packets take to reach a specific network destination.
+	•	How it works: Displays each hop (router or node) in the path and the time it takes to get there.
+	•	Usage:
+	•	Example: traceroute google.com
+	•	Use case: Diagnose network delays or identify bottlenecks.
+
+3. top
+	•	Purpose: Provides a real-time view of processes running on a system.
+	•	How it works: Displays CPU and memory usage per process, along with system resource utilization.
+	•	Usage:
+	•	Example: top
+	•	Use case: Monitor active processes and system performance in real-time.
+
+4. htop
+	•	Purpose: An interactive, user-friendly version of top.
+	•	How it works: Adds color-coded output, easier navigation, and filtering for viewing running processes and resource usage.
+	•	Usage:
+	•	Example: htop
+	•	Use case: Identify resource-intensive processes more intuitively.
+
+5. df -h
+	•	Purpose: Displays disk space usage in a human-readable format.
+	•	How it works: Shows the amount of disk space used and available on all mounted file systems.
+	•	Usage:
+	•	Example: df -h
+	•	Use case: Check available storage on your system, with sizes displayed in KB, MB, or GB.
+
+6. du -sh
+	•	Purpose: Summarizes the disk usage of a directory or file in a human-readable format.
+	•	How it works: Provides the size of a directory or file, including subdirectories.
+	•	Usage:
+	•	Example: du -sh /var/log
+	•	Use case: Quickly identify large directories or files taking up disk space.
+
+7. uptime
+	•	Purpose: Displays how long the system has been running and the current system load.
+	•	How it works: Outputs the current time, how long the system has been operational, and load averages for 1, 5, and 15 minutes.
+	•	Usage:
+	•	Example: uptime
+	•	Use case: Check system stability or understand how long the server has been active.
+
+8. whoami
+	•	Purpose: Displays the current username of the logged-in user.
+	•	How it works: Reads the current user’s environment or session variables to identify their username.
+	•	Usage:
+	•	Example: whoami
+	•	Use case: Verify user identity in multi-user environments or during troubleshooting.
+
+Why These Commands Are Safe
+	•	Non-Destructive: These commands don’t modify files, services, or configurations—they only report system or network information.
+	•	Useful for Diagnostics: They provide critical information about the system’s health, resource usage, and network connectivity.
+	•	Limited Permissions Needed: Most of these commands don’t require elevated privileges, reducing the risk of abuse.
+
+Let me know if you’d like examples or troubleshooting scenarios for any specific command!

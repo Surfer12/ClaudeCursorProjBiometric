@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#fafafa"/>
+    
+    <!-- Central Decision Hub -->
+    <circle cx="400" cy="300" r="100" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+    
+    <!-- Decision Pathways -->
+    <g id="pathways">
+        <!-- High Load -->
+        <path d="M 400,200 Q 600,250 500,400" fill="none" stroke="#FF9800" stroke-width="3"/>
+        <!-- Moderate Load -->
+        <path d="M 400,200 Q 400,300 400,400" fill="none" stroke="#4CAF50" stroke-width="3"/>
+        <!-- Low Load -->
+        <path d="M 400,200 Q 200,250 300,400" fill="none" stroke="#9C27B0" stroke-width="3"/>
+    </g>
+
+    <!-- State Nodes -->
+    <g id="states">
+        <!-- Alpha State -->
+        <circle cx="500" cy="400" r="40" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+        <text x="500" y="405" text-anchor="middle" font-family="Arial" font-size="12">Alpha</text>
+        
+        <!-- Beta State -->
+        <circle cx="400" cy="400" r="40" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+        <text x="400" y="405" text-anchor="middle" font-family="Arial" font-size="12">Beta</text>
+        
+        <!-- Gamma State -->
+        <circle cx="300" cy="400" r="40" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+        <text x="300" y="405" text-anchor="middle" font-family="Arial" font-size="12">Gamma</text>
+    </g>
+
+    <!-- Labels -->
+    <text x="400" y="300" text-anchor="middle" font-family="Arial" font-size="14">Decision</text>
+    <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="14">Architecture</text>
+</svg>

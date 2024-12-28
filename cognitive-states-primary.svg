@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#fafafa"/>
+    
+    <!-- Time Axis -->
+    <line x1="100" y1="500" x2="700" y2="500" stroke="#333" stroke-width="2"/>
+    <!-- Time Labels -->
+    <text x="100" y="520" font-family="Arial" font-size="12">0500</text>
+    <text x="300" y="520" font-family="Arial" font-size="12">0900</text>
+    <text x="500" y="520" font-family="Arial" font-size="12">1500</text>
+    <text x="700" y="520" font-family="Arial" font-size="12">2100</text>
+
+    <!-- Performance Curve -->
+    <path d="M 100,400 Q 250,200 400,150 T 700,400" 
+          fill="none" stroke="#2196F3" stroke-width="3"/>
+
+    <!-- State Zones -->
+    <g id="cognitive-states">
+        <!-- Reset Phase -->
+        <rect x="100" y="100" width="200" height="400" fill="#E3F2FD" fill-opacity="0.3"/>
+        <text x="200" y="130" text-anchor="middle" font-family="Arial" font-size="14">Network Reset</text>
+        
+        <!-- Peak Phase -->
+        <rect x="300" y="100" width="200" height="400" fill="#FFF3E0" fill-opacity="0.3"/>
+        <text x="400" y="130" text-anchor="middle" font-family="Arial" font-size="14">Peak Performance</text>
+        
+        <!-- Integration Phase -->
+        <rect x="500" y="100" width="200" height="400" fill="#E8F5E9" fill-opacity="0.3"/>
+        <text x="600" y="130" text-anchor="middle" font-family="Arial" font-size="14">Integration</text>
+    </g>
+
+    <!-- Performance Markers -->
+    <g id="markers">
+        <circle cx="200" cy="300" r="6" fill="#1976D2"/>
+        <circle cx="400" cy="150" r="6" fill="#FF9800"/>
+        <circle cx="600" cy="350" r="6" fill="#4CAF50"/>
+    </g>
+
+    <!-- Metabolic States -->
+    <text x="200" y="450" text-anchor="middle" font-family="Arial" font-size="12">Ketone Dominant</text>
+    <text x="400" y="450" text-anchor="middle" font-family="Arial" font-size="12">Mixed Substrate</text>
+    <text x="600" y="450" text-anchor="middle" font-family="Arial" font-size="12">Fat Adapted</text>
+</svg>

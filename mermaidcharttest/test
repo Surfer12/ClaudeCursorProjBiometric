@@ -1,0 +1,9 @@
+test mermaid chart
+```mermaid
+graph TD
+    A[Client] --> B{Load Balancer}
+    B --> C[Server 1]
+    B --> D[Server 2]
+    C --> E{Database}
+    D --> E
+```

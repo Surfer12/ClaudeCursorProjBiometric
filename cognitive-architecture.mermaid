@@ -1,0 +1,28 @@
+flowchart TB
+    subgraph Input["Sensory Input Layer"]
+        Raw["Raw Biometric Data"] --> Preprocessing["Signal Preprocessing"]
+        Watch["WatchOS Sensors"] --> Raw
+        Manual["Manual Markers"] --> Raw
+    end
+
+    subgraph Processing["Neural Processing Layer"]
+        State["State Analysis"] --> Integration["Information Integration"]
+        Pattern["Pattern Recognition"] --> Integration
+        Memory["State Memory"] --> Pattern
+    end
+
+    subgraph Output["Response Layer"]
+        Visualization["Real-time Visualization"]
+        Analysis["State Analysis"]
+        Export["Data Export"]
+    end
+
+    Preprocessing --> State
+    Integration --> Visualization
+    Integration --> Analysis
+    Analysis --> Memory
+    Integration --> Export
+
+    style Raw fill:#f9f,stroke:#333
+    style Integration fill:#bbf,stroke:#333
+    style Visualization fill:#bfb,stroke:#333

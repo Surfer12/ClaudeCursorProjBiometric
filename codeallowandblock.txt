@@ -1,0 +1,69 @@
+The commands listed in the denylist (e.g., package installations, framework setups) are blocked for the following reasons:
+
+1. Prevent Unauthorized Installations
+	•	Commands: brew install, npm install, yarn add, pip install, etc.
+	•	Reason: These commands allow users or malicious actors to install software or libraries that could:
+	•	Introduce security vulnerabilities (e.g., compromised npm packages, unvetted Python libraries).
+	•	Install unnecessary or malicious tools that consume system resources or introduce risks (e.g., spyware, malware, cryptominers).
+	•	Result in dependency or version conflicts in critical environments.
+
+2. Minimize Resource Usage
+	•	Commands: docker pull, docker run, kubectl apply.
+	•	Reason:
+	•	Large-scale component installation commands can significantly impact system performance by consuming:
+	•	Disk space (e.g., container images, npm/node_modules).
+	•	Network bandwidth (e.g., pulling images or dependencies).
+	•	This can cause slowdowns or outages in production or development environments.
+
+3. Reduce Attack Surface
+	•	Commands: Commands like brew tap, npx, or npm install -g often fetch content from external repositories or registries.
+	•	Reason:
+	•	External sources could host malicious or compromised content.
+	•	Real-World Examples:
+	•	npm packages like event-stream have previously been hijacked to include malicious code.
+	•	Developers could unintentionally run malicious scripts during npm install.
+
+4. Prevent Configuration Drift
+	•	Commands: npm install, pip install, yarn install.
+	•	Reason:
+	•	Allowing uncontrolled package or library installations can lead to inconsistencies between environments (e.g., different team members using different package versions).
+	•	Configuration drift can make systems hard to maintain and debug.
+
+5. Avoid System-Level Changes
+	•	Commands: sudo apt-get install, brew install.
+	•	Reason:
+	•	These commands modify system files, directories, or software. If misused:
+	•	They can unintentionally replace critical system libraries or binaries.
+	•	They might lead to system instability or downtime.
+
+6. Control Over Framework and Library Management
+	•	Commands: npx create-react-app, npx create-next-app, npm install react.
+	•	Reason:
+	•	Framework setup commands like React, Next.js, and Angular often create a significant number of dependencies and files.
+	•	Blocking them helps:
+	•	Prevent unnecessary clutter on shared or resource-constrained systems.
+	•	Ensure frameworks are only installed through controlled workflows or pipelines.
+
+7. Prevent Misuse by Malicious or Untrained Users
+	•	Commands: brew tap, npx, docker run.
+	•	Reason:
+	•	These commands can be misused to:
+	•	Install malicious or unintended software.
+	•	Execute arbitrary scripts with elevated permissions.
+	•	Example Scenario:
+	•	A user runs npx create-react-app but accidentally triggers an embedded script with malicious payloads.
+
+8. Maintain Development and Operational Stability
+	•	Commands: npm install -g, docker-compose up.
+	•	Reason:
+	•	Allowing global installations (npm install -g) can lead to:
+	•	Version conflicts when multiple projects require different versions of the same tool.
+	•	Accidental overwriting of critical binaries or tools.
+
+Summary of Why to Block:
+	•	Security: Prevents installation of malicious or vulnerable software.
+	•	Stability: Maintains consistency across environments and avoids unintended changes.
+	•	Performance: Reduces resource overhead from unnecessary installations or configurations.
+	•	Control: Ensures system administrators or authorized users maintain oversight of critical changes.
+
+Let me know if you need help refining the denylist or allowlist further for your specific use case!

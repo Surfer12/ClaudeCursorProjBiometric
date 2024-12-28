@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#fafafa"/>
+    
+    <!-- State Transition Layers -->
+    <g id="transition-layers">
+        <!-- Alpha Layer -->
+        <path d="M 100,150 Q 400,100 700,150" fill="none" stroke="#FF9800" stroke-width="4"/>
+        
+        <!-- Beta Layer -->
+        <path d="M 100,300 Q 400,250 700,300" fill="none" stroke="#4CAF50" stroke-width="4"/>
+        
+        <!-- Gamma Layer -->
+        <path d="M 100,450 Q 400,400 700,450" fill="none" stroke="#9C27B0" stroke-width="4"/>
+    </g>
+
+    <!-- Network States -->
+    <g id="network-states">
+        <!-- Alpha State -->
+        <circle cx="200" cy="150" r="40" fill="#FFF3E0" stroke="#FF9800" stroke-width="3"/>
+        <text x="200" y="155" text-anchor="middle" font-family="Arial" font-size="12">Alpha</text>
+        
+        <!-- Beta State -->
+        <circle cx="400" cy="300" r="40" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+        <text x="400" y="305" text-anchor="middle" font-family="Arial" font-size="12">Beta</text>
+        
+        <!-- Gamma State -->
+        <circle cx="600" cy="450" r="40" fill="#F3E5F5" stroke="#9C27B0" stroke-width="3"/>
+        <text x="600" y="455" text-anchor="middle" font-family="Arial" font-size="12">Gamma</text>
+    </g>
+
+    <!-- Transition Indicators -->
+    <g id="transitions">
+        <path d="M 240,150 Q 320,225 360,300" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <path d="M 440,300 Q 520,375 560,450" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    </g>
+
+    <!-- Metabolic Support Indicators -->
+    <g id="metabolic-support">
+        <text x="200" y="100" text-anchor="middle" font-family="Arial" font-size="10">High Glucose</text>
+        <text x="400" y="250" text-anchor="middle" font-family="Arial" font-size="10">Mixed Substrate</text>
+        <text x="600" y="400" text-anchor="middle" font-family="Arial" font-size="10">Fat Adapted</text>
+    </g>
+
+    <!-- Define arrowhead marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+    </defs>
+</svg>

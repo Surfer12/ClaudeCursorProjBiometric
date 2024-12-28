@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- System Background -->
+    <rect width="800" height="600" fill="#fafafa"/>
+    
+    <!-- Central Processing Hub -->
+    <g id="central-hub">
+        <circle cx="400" cy="300" r="120" fill="#E3F2FD" stroke="#1976D2" stroke-width="3"/>
+        <circle cx="400" cy="300" r="90" fill="#BBDEFB" stroke="#1976D2" stroke-width="2"/>
+        <circle cx="400" cy="300" r="60" fill="#90CAF9" stroke="#1976D2" stroke-width="2"/>
+        <text x="400" y="290" text-anchor="middle" font-family="Arial" font-size="16" fill="#1976D2">Decision</text>
+        <text x="400" y="310" text-anchor="middle" font-family="Arial" font-size="16" fill="#1976D2">Processing</text>
+    </g>
+
+    <!-- Decision Pathways -->
+    <g id="pathways">
+        <!-- High Load -->
+        <path d="M 400,180 Q 600,200 600,300" fill="none" stroke="#FF9800" stroke-width="4" stroke-dasharray="5,5"/>
+        <!-- Moderate Load -->
+        <path d="M 520,300 Q 600,400 520,500" fill="none" stroke="#4CAF50" stroke-width="4"/>
+        <!-- Low Load -->
+        <path d="M 400,420 Q 200,400 200,300" fill="none" stroke="#9C27B0" stroke-width="4" stroke-dasharray="10,5"/>
+    </g>
+
+    <!-- State Nodes -->
+    <g id="cognitive-states">
+        <!-- Strategic Analysis -->
+        <circle cx="600" cy="300" r="50" fill="#FFF3E0" stroke="#FF9800" stroke-width="3"/>
+        <text x="600" y="290" text-anchor="middle" font-family="Arial" font-size="12">Strategic</text>
+        <text x="600" y="310" text-anchor="middle" font-family="Arial" font-size="12">Analysis</text>
+
+        <!-- Integration -->
+        <circle cx="520" cy="500" r="50" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+        <text x="520" y="490" text-anchor="middle" font-family="Arial" font-size="12">Pattern</text>
+        <text x="520" y="510" text-anchor="middle" font-family="Arial" font-size="12">Integration</text>
+
+        <!-- Maintenance -->
+        <circle cx="200" cy="300" r="50" fill="#F3E5F5" stroke="#9C27B0" stroke-width="3"/>
+        <text x="200" y="290" text-anchor="middle" font-family="Arial" font-size="12">System</text>
+        <text x="200" y="310" text-anchor="middle" font-family="Arial" font-size="12">Maintenance</text>
+    </g>
+
+    <!-- Performance Metrics -->
+    <g id="metrics">
+        <text x="650" y="250" font-family="Arial" font-size="10">High Load: 90-100%</text>
+        <text x="600" y="550" font-family="Arial" font-size="10">Moderate: 70-89%</text>
+        <text x="150" y="250" font-family="Arial" font-size="10">Low Load: 50-69%</text>
+    </g>
+</svg>

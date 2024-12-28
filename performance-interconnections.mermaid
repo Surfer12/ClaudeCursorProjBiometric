@@ -1,0 +1,33 @@
+graph TB
+    subgraph Energy
+        KET[Ketones] --> ATP[ATP Production]
+        GLU[Glucose] --> ATP
+        FAT[Fat Oxidation] --> ATP
+    end
+
+    subgraph States
+        DS[Dawn State] --> PS[Peak State]
+        PS --> RS[Recovery State]
+        RS --> DS
+    end
+
+    subgraph Neural
+        DMN[Default Mode] --> TPN[Task Positive]
+        TPN --> SN[Salience Network]
+        SN --> DMN
+    end
+
+    subgraph Performance
+        NS[Network Stability]
+        TE[Task Execution]
+        PI[Pattern Integration]
+    end
+
+    ATP --> DS & PS & RS
+    DS --> DMN --> NS
+    PS --> TPN --> TE
+    RS --> SN --> PI
+
+    DS --> KET
+    PS --> GLU
+    RS --> FAT

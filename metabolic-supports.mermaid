@@ -1,0 +1,26 @@
+flowchart LR
+    subgraph Metabolic["Metabolic Support Systems"]
+        direction TB
+        A[Ketones] --> B[ATP Production]
+        C[Glucose] --> B
+        D[Fat Oxidation] --> B
+    end
+    
+    subgraph States["State Requirements"]
+        direction TB
+        E[Dawn State]
+        F[Peak Performance]
+        G[Recovery]
+    end
+    
+    subgraph Outputs["Performance Outputs"]
+        direction TB
+        H[Network Stability]
+        I[Task Execution]
+        J[Pattern Integration]
+    end
+    
+    B --> E & F & G
+    E --> H
+    F --> I
+    G --> J

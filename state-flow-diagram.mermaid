@@ -1,0 +1,36 @@
+graph TB
+    subgraph "Morning State"
+        A[Dawn State] --> B[Network Reset]
+        B --> C[Circuit Activation]
+        C --> D[Peak Ready]
+        
+        style A fill:#e1f5fe
+        style B fill:#e1f5fe
+        style C fill:#e1f5fe
+        style D fill:#e1f5fe
+    end
+    
+    subgraph "Peak Performance"
+        E[Flow Entry] --> F[Task Positive]
+        F --> G[Pattern Recognition]
+        G --> H[Sustained Performance]
+        
+        style E fill:#fff3e0
+        style F fill:#fff3e0
+        style G fill:#fff3e0
+        style H fill:#fff3e0
+    end
+    
+    subgraph "Recovery Phase"
+        I[Integration] --> J[System Reset]
+        J --> K[Pattern Lock]
+        K --> L[Regeneration]
+        
+        style I fill:#f3e5f5
+        style J fill:#f3e5f5
+        style K fill:#f3e5f5
+        style L fill:#f3e5f5
+    end
+    
+    D --> E
+    H --> I

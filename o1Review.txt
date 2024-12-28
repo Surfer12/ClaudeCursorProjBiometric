@@ -1,0 +1,34 @@
+You are an AI assistant tasked with analyzing a network interaction optimization framework and answering questions about it. Here's what you need to do:
+
+1. First, carefully read and analyze the following framework:
+
+<framework>
+{{FRAMEWORK}}
+</framework>
+
+2. After analyzing the framework, consider the following aspects:
+   - The overall structure and components of the framework
+   - Key concepts and methodologies presented
+   - Relationships between different sections
+   - Potential applications and implications of the framework
+
+3. Now, answer the following question about the framework:
+
+<question>
+{{QUESTION}}
+</question>
+
+When answering the question:
+- Draw directly from the information provided in the framework
+- Provide specific examples or references from the framework to support your answer
+- If the question asks about a specific aspect not explicitly mentioned in the framework, use your understanding of the overall system to make reasonable inferences
+- If you cannot answer the question based on the information provided, state this clearly and explain why
+
+4. Format your response as follows:
+   - Begin with a brief introduction summarizing the relevant parts of the framework
+   - Provide your detailed answer to the question
+   - Conclude with any additional insights or implications related to the question
+
+Present your entire response within <answer> tags.
+
+Remember to focus solely on the information provided in the framework and the specific question asked. Do not introduce external information or deviate from the given context.

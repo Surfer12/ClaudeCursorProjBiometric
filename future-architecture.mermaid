@@ -1,0 +1,31 @@
+flowchart TB
+    subgraph FutureInputs["Enhanced Data Capture"]
+        EEG[EEG Integration] -.-> |Neural| AdvBM[Advanced Biometric]
+        GSR[Galvanic Skin] -.-> |Stress| AdvBM
+        Motion[Motion Analysis] -.-> |Activity| AdvBM
+        AdvBM -.-> |Complex Signals| EnhancedEngine
+    end
+
+    subgraph DeepAnalysis["Advanced Analysis Layer"]
+        EnhancedEngine[Enhanced Engine] -.-> |ML Processing| PredictiveHRV
+        EnhancedEngine -.-> |Pattern Recognition| StatePredictor
+        PredictiveHRV -.-> |Advanced Metrics| DeepIntegration
+        StatePredictor -.-> |Forecasting| DeepIntegration
+    end
+
+    subgraph AdvancedViz["Enhanced Monitoring"]
+        DeepIntegration[Deep Integration] -.-> |Predictive| AIAssist[AI Assistant]
+        DeepIntegration -.-> |Complex| FlowState[Flow State Detection]
+        DeepIntegration -.-> |Longitudinal| AdaptiveResponse[Adaptive Response]
+    end
+
+    subgraph FutureMetrics["Future Metrics"]
+        AIAssist -.-> |AI-Driven| OptimalTiming[Optimal Timing]
+        FlowState -.-> |Detection| StateOptimization[State Optimization]
+        AdaptiveResponse -.-> |Learning| PersonalizedProtocols[Personalized Protocols]
+    end
+
+    style FutureInputs fill:#e3f2fd,stroke:#2196F3,stroke-dasharray: 5 5
+    style DeepAnalysis fill:#fff3e0,stroke:#ff9800,stroke-dasharray: 5 5
+    style AdvancedViz fill:#e8f5e9,stroke:#4caf50,stroke-dasharray: 5 5
+    style FutureMetrics fill:#f3e5f5,stroke:#9c27b0,stroke-dasharray: 5 5

@@ -1,0 +1,49 @@
+flowchart TB
+    subgraph Metabolic["Primary Energy Systems"]
+        direction TB
+        K[Ketones] --> ATP["ATP Production"]
+        G[Glucose] --> ATP
+        F[Fat Oxidation] --> ATP
+        style K fill:#e3f2fd
+        style G fill:#fff3e0
+        style F fill:#e8f5e9
+        style ATP fill:#f3e5f5
+    end
+
+    subgraph States["State Requirements"]
+        direction LR
+        DS["Dawn State|Ketone Dominant"] --> PS["Peak State|Mixed Substrate"]
+        PS --> RS["Recovery State|Fat Adapted"]
+        style DS fill:#e3f2fd
+        style PS fill:#fff3e0
+        style RS fill:#e8f5e9
+    end
+
+    subgraph Neural["Neural Networks"]
+        direction TB
+        DMN["Default Mode"] 
+        TPN["Task Positive"]
+        SN["Salience Network"]
+        style DMN fill:#e3f2fd
+        style TPN fill:#fff3e0
+        style SN fill:#e8f5e9
+    end
+
+    subgraph Performance["Performance Outputs"]
+        direction TB
+        NS["Network Stability"]
+        TE["Task Execution"]
+        PI["Pattern Integration"]
+        style NS fill:#e3f2fd
+        style TE fill:#fff3e0
+        style PI fill:#e8f5e9
+    end
+
+    ATP --> DS & PS & RS
+    DS --> DMN --> NS
+    PS --> TPN --> TE
+    RS --> SN --> PI
+
+    DMN --> TPN
+    TPN --> SN
+    SN --> DMN

@@ -1,0 +1,16 @@
+Update your nameservers
+Find the list of nameservers at your registrar. Add both of your assigned Cloudflare nameservers, remove any other nameservers, and save your changes.
+
+Your assigned Cloudflare nameservers
+julian.ns.cloudflare.com
+
+keira.ns.cloudflare.com
+
+API
+Zone ID
+
+dd595e59135e164448a5f2fa44de4e8f
+Click to copy
+Account ID
+
+1f4579cda5f6fb7a3a15ac6438ae7da3
